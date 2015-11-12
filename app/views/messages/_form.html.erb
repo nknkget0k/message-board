@@ -24,17 +24,26 @@
   
 <% end %>
 
-
-  名前:
+<form>
+  <div class="form-group">
+    <label for="inputname">名前:</label>
+      <div class="col-sm6">
+<%= f.text_field :name, class: "form-control" %>
+  </div>
   
-<%= f.text_field :name %>
+   <div class="form-group">
+    <label for="inputage">年齢:</label>
+      <div class="col-sm6">
+<%= f.text_field :age, class: "form-control" %>
+  </div>
 
-
-  内容:
+  <div class="form-group">
+    <label for="inputbody">内容:</label>
+<%= f.text_area :body, class: "form-control" %>
+  </div>
   
-<%= f.text_field :body %>
-
-  
+  <div class="form-group">  
 <%= f.submit class: "btn btn-sm btn-primary" %>
+  </div>
 
 <% end %>
